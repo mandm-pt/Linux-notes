@@ -17,3 +17,8 @@ Some general Linux notes:
 ### Bash shell builtin
 
 * `fc`: Utility for listing, editing and re-executing commands previously entered into an interactive shell
+
+## Other Notes
+
+* [firewall-ufw](./firewall-ufw)
+
