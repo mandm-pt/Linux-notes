@@ -3,3 +3,4 @@ hexedit
 qemu
 ufw
 unrar
+xclip
