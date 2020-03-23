@@ -13,6 +13,9 @@ Some general Linux notes:
 * `watch`: Execute a program periodically
 * `!!`: Repeats the previous command you entered in your terminal
 * `history`: Shows all of the last commands that have been recently used
+* `sleep`: Delays for a specific amout of time `sleep 10 && ls -lh`
+* `time`: Runs the program and summarizes resource usage
+* `timeout`: Runs a program with a time limit
 
 ### Bash shell builtin
 
