@@ -1,6 +1,7 @@
-tmux
+byobu
 hexedit
 qemu
-ufw
+gufw
 unrar
 xsel
+git

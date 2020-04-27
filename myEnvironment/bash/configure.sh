@@ -1,2 +1,1 @@
-#!/bin/bash
-cat ./.bashrc >> ~/.bashrc
+cat ./bashrc >> ~/.bashrc

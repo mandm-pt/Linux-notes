@@ -1,3 +1,4 @@
+htop
 code
 keepassxc
 remmina
