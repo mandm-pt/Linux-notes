@@ -25,3 +25,6 @@ Some general Linux notes:
 
 * [firewall-ufw](./firewall-ufw)
 
+## Helpful Resources
+
+* [linux-training.be](http://linux-training.be/)

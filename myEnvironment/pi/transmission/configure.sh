@@ -1,4 +1,3 @@
-#!/bin/bash
 sudo systemctl stop transmission-daemon
 
 sudo usermod -a -G debian-transmission $(users)

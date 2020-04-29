@@ -5,4 +5,4 @@ gufw
 unrar
 xsel
 git
-network-manager-openvpn
+network-manager-openvpn-gnome
