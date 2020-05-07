@@ -23,7 +23,7 @@ More info [here](https://www.raspberrypi.org/documentation/)
 
 ## Account
 
-1. Change default password of `pi`
+1. Change default password of `pi` (`raspberry`)
 2. Create New Username\
    `sudo adduser USERNAME`
 3. Add new user to `sudo` group\
