@@ -89,7 +89,7 @@ nano /etc/pacman.d/mirrorlist
 | Filesystem utilities        | e2fsprogs                           |
 | User delegatation util      | sudo                                |
 | text editor                 | nano                                |
-| Network manager             | networkmanager                      |
+| Wireless daemon             | iwctl                               |
 | documentation               | man-db, man-pages, texinfo          |
 | Display server + xorg-apps  | xorg                                |
 | Xfce desktop environment    | xfce4, xfce4-goodies                |
@@ -178,7 +178,9 @@ systemctl enable lightdm
 ```
 Enable Network Manager
 ```bash
-systemctl enable NetworkManager
+systemctl enable iwd
+systemctl enable systemd-networkd
+systemctl enable systemd-resolved
 ```
 
 # Reboot
