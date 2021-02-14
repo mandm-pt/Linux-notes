@@ -1,8 +1,7 @@
-byobu
+tmux
 hexedit
 qemu
 gufw
 unrar
 xsel
 git
-network-manager-openvpn-gnome

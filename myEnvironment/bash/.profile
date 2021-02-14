@@ -1,0 +1,2 @@
+
+setxkbmap -option 'numpad:microsoft'
