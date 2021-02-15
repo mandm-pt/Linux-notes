@@ -106,6 +106,10 @@ Check the status of your Nextcloud jail by running:
 
 # Management
 
+* Show list of commands: `sudo nextcloud.occ list`
+
+* Show command help, example: `sudo nextcloud.occ files:scan -h`
+
 * List all the applications currently available to Nextcloud organized by Enabled or Disabled:
 `nextcloud.occ app:list`
 
@@ -117,3 +121,45 @@ Check the status of your Nextcloud jail by running:
 
 * The status command will print some basic version information:
 `nextcloud.occ status`
+
+# Useful Apps
+
+* [Metadata](https://apps.nextcloud.com/apps/metadata)
+* [News](https://apps.nextcloud.com/apps/news)
+* [Maps](https://apps.nextcloud.com/apps/maps)
+* [Notes](https://apps.nextcloud.com/apps/notes)
+
+# Important Notes
+
+## Browser uploading big files > 512MB
+
+The default maximum file size for uploads is 512MB. You can increase this limit up to what your filesystem and operating system allows. There are certain hard limits that cannot be exceeded:
+
+* 2GB on 32Bit OS-architecture
+* 2GB with IE6 - IE8
+* 4GB with IE9 - IE11
+
+64-bit filesystems have much higher limits; consult the documentation for your filesystem.
+
+> The Nextcloud sync client is not affected by these upload limits as it is uploading files in smaller chunks. See Client documentation for more information on configuration options.
+
+## Backup
+
+[More info](https://docs.nextcloud.com/server/20/admin_manual/maintenance/backup.html)
+
+## Scan files
+
+We can add files manually directly to a user folder, example: `/mnt/datadrive/nextcloud/data/USER`
+
+We can use rsync to transfer the data:
+`rsync -Pze ssh --rsync-path='sudo rsync' ./*.doc HOST:/mnt/datadrive/nextcloud/data/USER/files`
+
+If we add files directly, we have to tell nextcloud to rescan the data directoy.
+Make sure the files you copy to the data directory have the appropriate permissions.
+`chown root:root FILE` or `chown -R root:root PATH/FOLDER` and `chmod 0640 FILE`
+
+Rescan entire user's data : `sudo nextcloud.occ files:scan USER`
+Rescan a specific directory with verbose: `sudo nextcloud.occ files:scan -p /USER/files/Photos -v USER`
+
+[More info](https://docs.nextcloud.com/server/20/admin_manual/configuration_server/occ_command.html#file-operations)
+
