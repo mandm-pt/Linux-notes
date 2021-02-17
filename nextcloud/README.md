@@ -152,7 +152,7 @@ The default maximum file size for uploads is 512MB. You can increase this limit 
 We can add files manually directly to a user folder, example: `/mnt/datadrive/nextcloud/data/USER`
 
 We can use rsync to transfer the data:
-`rsync -Pze ssh --rsync-path='sudo rsync' ./*.doc HOST:/mnt/datadrive/nextcloud/data/USER/files`
+`rsync -Pe ssh --rsync-path='sudo rsync' ./*.doc HOST:/mnt/datadrive/nextcloud/data/USER/files`
 
 If we add files directly, we have to tell nextcloud to rescan the data directoy.
 Make sure the files you copy to the data directory have the appropriate permissions.
@@ -163,3 +163,9 @@ Rescan a specific directory with verbose: `sudo nextcloud.occ files:scan -p /USE
 
 [More info](https://docs.nextcloud.com/server/20/admin_manual/configuration_server/occ_command.html#file-operations)
 
+## Dav Commands
+
+[More info](https://docs.nextcloud.com/server/20/admin_manual/configuration_server/occ_command.html#dav-commands)
+
+Adds all birthdays to your calendar from addressbooks shared with you. 
+`sudo nextcloud.occ dav:sync-birthday-calendar USER`
