@@ -4,3 +4,7 @@ keepassxc
 remmina
 skype
 vlc
+discord
+pinta
+slack
+yubioath-desktop
